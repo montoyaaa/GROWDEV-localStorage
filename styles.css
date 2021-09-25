@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  color: rgb(39, 39, 39);
+}
+
+#container {
+  display: flex;
+  background-color: black;
+  height: 100%;
+}
+
+#image-container {
+  background-image: url("./assets/banner.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  flex: 0;
+}
+
+#content {
+  height: 100%;
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+#content section {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-message {
+  text-align: center;
+}
+.welcome-message h1 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+.form input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: solid 2px purple;
+}
+.form input:focus {
+  border-bottom: solid 2px orange;
+}
+.form label {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 10px;
+}
+.buttons-group button {
+  font-size: 16px;
+  color: purple;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: transparent;
+  flex: 1;
+  border: none;
+  border-bottom: solid 2px purple;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.buttons-group button:hover {
+  color: orange;
+  border-bottom: solid 2px orange;
+}
+
+@media (min-width: 420px) {
+  #image-container {
+    flex: 1;
+  }
+}
+@media (min-width: 720px) {
+  #image-container {
+    flex: 3;
+  }
+}
